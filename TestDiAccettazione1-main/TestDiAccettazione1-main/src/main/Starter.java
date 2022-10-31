@@ -1,11 +1,15 @@
 package main;
 
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+
 public class Starter {
 
 	public static void main(String[] args) throws Throwable {
         System.out.println("Test in avvio...");
-        Controllore c = new Controllore();
-		if(c.controlliPrimaDellaConsegna()){
+        JUnitCore c = new JUnitCore();
+        Result risultati=c.run(Controllore.class);
+		if(risultati.getFailureCount()==0){
 			System.out.println("Test passati con successo!");
 		}else{
 		System.out.println("Attenzione! Uno o piu' dei controlli prima della consegna "
