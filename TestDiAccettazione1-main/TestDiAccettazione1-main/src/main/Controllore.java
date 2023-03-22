@@ -80,7 +80,7 @@ public class Controllore {
 
 	@Test
 	public void esisteComando() {
-		String nomeAtteso = "it.uniroma3.diadia.comandi.Comando";
+		String nomeAtteso = "it.uniroma3.diadia.Comando";
 		try {
 			Class.forName(nomeAtteso);
 			System.out.println("OK! Esiste Comando ed e' nel package corretto.");
